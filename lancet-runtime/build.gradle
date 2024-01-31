@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = "com.zhangyue.lancet"
+            artifactId = 'lancet-runtime'
+            version = '0.1.0'
+
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            url = "../repo"
+        }
+    }
+}

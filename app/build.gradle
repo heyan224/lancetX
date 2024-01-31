@@ -1,0 +1,100 @@
+
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+//apply plugin: com.example.plugin.TimeCostPlugin
+//
+//time{
+//    threshold = 0.2
+//    appPackage = 'dddd'
+//}
+
+apply plugin: 'bytex'
+ByteX {
+    enable true
+    enableInDebug true
+}
+
+
+apply plugin: 'LancetX'
+LancetX{
+    enable true
+    enableInDebug true
+//    isFullTrace true
+//    myTrace "com/knightboost/lancetx/MyTrace"
+//    pluginInfo "app"
+    weaveGroup{
+        insertTest {
+            enable true
+        }
+        proxyTest {
+            enable true
+        }
+        replaceInvokeTest {
+            enable true
+        }
+
+    }
+
+//    methodGroup {
+//        "com/knightboost/lancetx" {
+//            enable true
+//        }
+//    }
+//    blackGroup {
+//        "com/knightboost/lancetx/MainActivity" {
+//            enable true
+//            blackMethodList = [
+//                    "onResume"
+//            ]
+//        }
+//
+//    }
+
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.knightboost.lancetx"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'org.aspectj:aspectjrt:1.8.9'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+  //  api 'io.github.knight-zxw:lancet-runtime:0.0.7'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+}
+
+apply plugin: "com.vanniktech.maven.publish"

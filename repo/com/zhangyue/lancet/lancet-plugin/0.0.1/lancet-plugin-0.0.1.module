@@ -1,0 +1,108 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.zhangyue.lancet",
+    "module": "lancet-plugin",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lancet-plugin-0.0.1.jar",
+          "url": "lancet-plugin-0.0.1.jar",
+          "size": 143715,
+          "sha512": "be4fac3d5052cd702f0bc3429f731e4172210cd3e016eace1a851d9074279e7d17dc4118a73cf411b38c34058df35d0e9802e43a3cca80f00b957993f9044ed2",
+          "sha256": "c876a44e70941d0b9399ef3cdde494454b5a2a8d2375eafa9d2286393a5f2ba9",
+          "sha1": "91a4007dea7a84e0aa2aa4bb0fa9982ec91c9c30",
+          "md5": "83a4356e9ae07f4fb5ad1613726404f4"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.bytedance.android.byteX",
+          "module": "common",
+          "version": {
+            "requires": "0.3.0"
+          },
+          "excludes": [
+            {
+              "group": "com.google.code.findbugs",
+              "module": "jsr305"
+            }
+          ]
+        },
+        {
+          "group": "com.bytedance.android.byteX",
+          "module": "PluginConfigProcessor",
+          "version": {
+            "requires": "0.3.0"
+          },
+          "excludes": [
+            {
+              "group": "com.google.code.findbugs",
+              "module": "jsr305"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.6.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lancet-plugin-0.0.1.jar",
+          "url": "lancet-plugin-0.0.1.jar",
+          "size": 143715,
+          "sha512": "be4fac3d5052cd702f0bc3429f731e4172210cd3e016eace1a851d9074279e7d17dc4118a73cf411b38c34058df35d0e9802e43a3cca80f00b957993f9044ed2",
+          "sha256": "c876a44e70941d0b9399ef3cdde494454b5a2a8d2375eafa9d2286393a5f2ba9",
+          "sha1": "91a4007dea7a84e0aa2aa4bb0fa9982ec91c9c30",
+          "md5": "83a4356e9ae07f4fb5ad1613726404f4"
+        }
+      ]
+    }
+  ]
+}

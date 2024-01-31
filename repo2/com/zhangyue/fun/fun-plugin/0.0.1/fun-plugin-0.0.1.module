@@ -1,0 +1,83 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.zhangyue.fun",
+    "module": "fun-plugin",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "fun-plugin-0.0.1.jar",
+          "url": "fun-plugin-0.0.1.jar",
+          "size": 11223,
+          "sha512": "fcc3a3ad6215d370e5fe3e1fea02f0d059f9144894e1ca1a48db491653ef990cc22fae473ed3bdc0f069dfa3115de7e48dc13dfb818c8a1318411170ec86ea95",
+          "sha256": "fbfee44e91dcabd6c8146977977488ab823f7438476c929ed531fd3502ce6e57",
+          "sha1": "16d4b29a7560720f65082d16a343c71ec6d2e2bd",
+          "md5": "e2e480c1916fe884e14bc6b281d83988"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "4.0.0"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "7.0"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm-commons",
+          "version": {
+            "requires": "7.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "fun-plugin-0.0.1.jar",
+          "url": "fun-plugin-0.0.1.jar",
+          "size": 11223,
+          "sha512": "fcc3a3ad6215d370e5fe3e1fea02f0d059f9144894e1ca1a48db491653ef990cc22fae473ed3bdc0f069dfa3115de7e48dc13dfb818c8a1318411170ec86ea95",
+          "sha256": "fbfee44e91dcabd6c8146977977488ab823f7438476c929ed531fd3502ce6e57",
+          "sha1": "16d4b29a7560720f65082d16a343c71ec6d2e2bd",
+          "md5": "e2e480c1916fe884e14bc6b281d83988"
+        }
+      ]
+    }
+  ]
+}
