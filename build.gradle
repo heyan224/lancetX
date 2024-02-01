@@ -26,8 +26,8 @@ buildscript {
 
         classpath "com.bytedance.android.byteX:base-plugin:0.3.0"
         classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
-      //  classpath 'io.github.knight-zxw:lancet-plugin:0.0.7'
-       classpath 'com.zhangyue.lancet:lancet-plugin:0.0.1'
+        //classpath 'io.github.knight-zxw:lancet-plugin:0.0.7'
+      classpath 'com.zhangyue.lancet:lancet-plugin:0.0.1'
 
 
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"

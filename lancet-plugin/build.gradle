@@ -7,13 +7,13 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 dependencies {
-    implementation fileTree(dir: '../app/libs', include: ['lancet-runtime-0.1.jar'])
-
+    //api 'io.github.knight-zxw:lancet-runtime:0.0.7'
+    implementation 'io.github.heyan224:lancet-runtime:0.0.1'
     compileOnly "com.android.tools.build:gradle:4.1.2"
     compileOnly gradleApi()
 
 
-   // implementation project(":business:web:api")
+
     testImplementation 'junit:junit:4.13.2'
 
     implementation ("com.bytedance.android.byteX:common:${byteXVersion}"){
@@ -30,23 +30,23 @@ dependencies {
     }
 }
 
-
-apply plugin: 'maven-publish'
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = "com.zhangyue.lancet"
-            artifactId = 'lancet-plugin'
-            version = '0.0.1'
-
-
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            url = "../repo"
-        }
-    }
-}
+apply plugin: "com.vanniktech.maven.publish"
+//apply plugin: 'maven-publish'
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            groupId = "com.zhangyue.lancet"
+//            artifactId = 'lancet-plugin'
+//            version = '0.0.1'
+//
+//
+//            from components.java
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            url = "../repo"
+//        }
+//    }
+//}

@@ -8,21 +8,5 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 
-apply plugin: 'maven-publish'
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = "com.zhangyue.lancet"
-            artifactId = 'lancet-runtime'
-            version = '0.1.0'
+apply plugin: "com.vanniktech.maven.publish"
 
-            from components.java
-        }
-    }
-
-    repositories {
-        maven {
-            url = "../repo"
-        }
-    }
-}

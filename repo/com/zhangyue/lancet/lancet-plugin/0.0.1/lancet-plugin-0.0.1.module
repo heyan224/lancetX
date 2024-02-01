@@ -39,10 +39,10 @@
           "name": "lancet-plugin-0.0.1.jar",
           "url": "lancet-plugin-0.0.1.jar",
           "size": 143715,
-          "sha512": "be4fac3d5052cd702f0bc3429f731e4172210cd3e016eace1a851d9074279e7d17dc4118a73cf411b38c34058df35d0e9802e43a3cca80f00b957993f9044ed2",
-          "sha256": "c876a44e70941d0b9399ef3cdde494454b5a2a8d2375eafa9d2286393a5f2ba9",
-          "sha1": "91a4007dea7a84e0aa2aa4bb0fa9982ec91c9c30",
-          "md5": "83a4356e9ae07f4fb5ad1613726404f4"
+          "sha512": "710d73088f7990661bfd984743b46f7554d59b3ca96db769ea86d823fecef04a1b6e69b20c55f2fac9fa60802b3b8f24d839ab464dd9f449f964d3ca36f454e1",
+          "sha256": "b072a5165fccccf65c1adfdb9de0c0d54bced8ef04fdb71eff0a57f6a9683469",
+          "sha1": "88560bc3180ea00fb70298b8b16081cfc3eb5788",
+          "md5": "0856bf2dab91ab43470a993e4f9ad502"
         }
       ]
     },
@@ -58,6 +58,13 @@
         "org.jetbrains.kotlin.platform.type": "jvm"
       },
       "dependencies": [
+        {
+          "group": "io.github.heyan224",
+          "module": "lancet-runtime",
+          "version": {
+            "requires": "0.0.1"
+          }
+        },
         {
           "group": "com.bytedance.android.byteX",
           "module": "common",
@@ -97,10 +104,10 @@
           "name": "lancet-plugin-0.0.1.jar",
           "url": "lancet-plugin-0.0.1.jar",
           "size": 143715,
-          "sha512": "be4fac3d5052cd702f0bc3429f731e4172210cd3e016eace1a851d9074279e7d17dc4118a73cf411b38c34058df35d0e9802e43a3cca80f00b957993f9044ed2",
-          "sha256": "c876a44e70941d0b9399ef3cdde494454b5a2a8d2375eafa9d2286393a5f2ba9",
-          "sha1": "91a4007dea7a84e0aa2aa4bb0fa9982ec91c9c30",
-          "md5": "83a4356e9ae07f4fb5ad1613726404f4"
+          "sha512": "710d73088f7990661bfd984743b46f7554d59b3ca96db769ea86d823fecef04a1b6e69b20c55f2fac9fa60802b3b8f24d839ab464dd9f449f964d3ca36f454e1",
+          "sha256": "b072a5165fccccf65c1adfdb9de0c0d54bced8ef04fdb71eff0a57f6a9683469",
+          "sha1": "88560bc3180ea00fb70298b8b16081cfc3eb5788",
+          "md5": "0856bf2dab91ab43470a993e4f9ad502"
         }
       ]
     }

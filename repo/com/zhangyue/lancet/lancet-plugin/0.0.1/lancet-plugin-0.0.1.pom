@@ -17,6 +17,12 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
+      <groupId>io.github.heyan224</groupId>
+      <artifactId>lancet-runtime</artifactId>
+      <version>0.0.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
       <groupId>com.bytedance.android.byteX</groupId>
       <artifactId>common</artifactId>
       <version>0.3.0</version>

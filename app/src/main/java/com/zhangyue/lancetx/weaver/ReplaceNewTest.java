@@ -9,11 +9,16 @@ import com.zhangyue.lancetx.ProxyThread;
 @Weaver
 public class ReplaceNewTest {
 
-    @ReplaceNewInvoke()
-    public static void replaceNewThread(Thread t, ProxyThread proxyThread){
-    }
+//    @ReplaceNewInvoke()
+//    public static void replaceNewThread(Thread t, ProxyThread proxyThread){
+//    }
+//
+//    @ReplaceNewInvoke()
+//    public static void replaceIntent(Intent intent, WrappedIntent newIntent){
+//    }
 
     @ReplaceNewInvoke()
-    public static void replaceIntent(Intent intent, WrappedIntent newIntent){
+    public static void replaceNewThread(Thread t, ProxyThread proxyThread, ThreadFactoryProxyThread extra) {
     }
+
 }
