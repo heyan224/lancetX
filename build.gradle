@@ -1,9 +1,10 @@
 buildscript {
     ext.kotlin_version = '1.6.0'
     repositories {
+        mavenCentral()
         maven { setUrl("https://maven.aliyun.com/repository/public") }
         maven { setUrl("https://maven.aliyun.com/repository/google") }
-        mavenCentral()
+
         google()
 
         maven { setUrl("https://artifact.bytedance.com/repository/byteX/") }
@@ -26,9 +27,8 @@ buildscript {
 
         classpath "com.bytedance.android.byteX:base-plugin:0.3.0"
         classpath 'com.vanniktech:gradle-maven-publish-plugin:0.18.0'
-        //classpath 'io.github.knight-zxw:lancet-plugin:0.0.7'
-      classpath 'com.zhangyue.lancet:lancet-plugin:0.0.1'
 
+        classpath 'io.github.heyan224:lancet-plugin:0.0.6'
 
 //        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
 //        classpath "io.codearte.gradle.nexus:gradle-nexus-staging-plugin:0.30.0"
@@ -40,11 +40,11 @@ buildscript {
 
 allprojects {
     repositories {
+
         maven { setUrl("https://maven.aliyun.com/repository/public") }
         maven { setUrl("https://maven.aliyun.com/repository/google") }
-        mavenCentral()
         google()
-
+        mavenCentral()
         maven { setUrl("https://artifact.bytedance.com/repository/byteX/") }
         maven {
             //配置本地插件目录

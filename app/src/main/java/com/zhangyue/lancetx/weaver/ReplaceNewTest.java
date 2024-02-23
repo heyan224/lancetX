@@ -2,11 +2,13 @@ package com.zhangyue.lancetx.weaver;
 
 import android.content.Intent;
 
+import com.knightboost.lancet.api.annotations.Group;
 import com.knightboost.lancet.api.annotations.ReplaceNewInvoke;
 import com.knightboost.lancet.api.annotations.Weaver;
 import com.zhangyue.lancetx.ProxyThread;
 
 @Weaver
+@Group("threadOptimize")
 public class ReplaceNewTest {
 
 //    @ReplaceNewInvoke()

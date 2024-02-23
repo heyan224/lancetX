@@ -68,9 +68,10 @@ public class WeaveTransformer {
         //不会生成新函数的Visitor
         connect(new ReplaceClassVisitor(transformInfo));
         connect(new ReplaceNewClassVisitor(transformInfo));
+        connect(new ReplaceNewThreadVisitor(transformInfo));
         connect(new ThreadFactoryVisitor(transformInfo));
-        connect(new TryCatchClassVisitor(transformInfo));
-        connect(new OkHttpClientBuilder());
+//        connect(new TryCatchClassVisitor(transformInfo));
+//        connect(new OkHttpClientBuilder());
 
         this.originalClassVisitor = originalClassVisitor;
 

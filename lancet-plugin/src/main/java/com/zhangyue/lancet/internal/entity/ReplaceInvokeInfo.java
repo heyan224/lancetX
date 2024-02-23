@@ -2,6 +2,7 @@ package com.zhangyue.lancet.internal.entity;
 
 import com.android.ddmlib.Log;
 
+import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 
 public class ReplaceInvokeInfo {
@@ -11,9 +12,12 @@ public class ReplaceInvokeInfo {
     private MethodNode methodNode;
 
     private String extraClassType;
+    public  ClassNode classNode;
 
-    public ReplaceInvokeInfo(String classType, String newClassType, MethodNode methodNode, String extraClassType) {
+
+    public ReplaceInvokeInfo(String classType, String newClassType, ClassNode classNode, MethodNode methodNode, String extraClassType) {
         this.targetClassType = classType;
+        this.classNode = classNode;
         this.methodNode = methodNode;
         this.newClassType = newClassType;
         this.extraClassType = extraClassType;

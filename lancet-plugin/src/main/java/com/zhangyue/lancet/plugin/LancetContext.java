@@ -47,6 +47,9 @@ public class LancetContext extends BaseContext<LancetExtension> {
         return extension.isWeaveGroupEnable(group);
     }
 
+    public String getWeaverGroupName(String weaverClass) {
+        return weaverClassOfGroupMap.get(weaverClass);
+    }
 
     public TransformInfo getTransformInfo(){
         return transformInfo;

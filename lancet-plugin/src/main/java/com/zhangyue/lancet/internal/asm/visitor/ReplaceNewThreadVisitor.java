@@ -11,12 +11,12 @@ import org.objectweb.asm.Opcodes;
 
 import java.util.List;
 
-public class ReplaceNewClassVisitor extends BaseWeaveClassVisitor{
+public class ReplaceNewThreadVisitor extends BaseWeaveClassVisitor{
     private final List<ReplaceInvokeInfo> replaceInvokes;
     private String thread_factory = "java/util/concurrent/ThreadFactory";
     String className;
     boolean isThreadFactory;
-    public ReplaceNewClassVisitor(TransformInfo transformInfo){
+    public ReplaceNewThreadVisitor(TransformInfo transformInfo){
         replaceInvokes = transformInfo.replaceInvokes;
     }
 
@@ -56,7 +56,7 @@ public class ReplaceNewClassVisitor extends BaseWeaveClassVisitor{
     }
 
 
-    class ReplaceNewInstructionVisitor  extends MethodVisitor{
+    class ReplaceNewInstructionVisitor extends MethodVisitor {
 
         private ReplaceInvokeInfo replaceInvokeInfo = null;
         public ReplaceNewInstructionVisitor(MethodVisitor methodVisitor) {
@@ -86,8 +86,16 @@ public class ReplaceNewClassVisitor extends BaseWeaveClassVisitor{
             if (replaceInvokeInfo != null && "<init>".equals(name) && owner.equals(replaceInvokeInfo.getTargetClassType()) && shouldReplace(className,replaceInvokeInfo)) {
                 System.out.println("ReplaceInvokeInfo2222=owner=" + owner + ",getTargetClassType= " + replaceInvokeInfo.getTargetClassType()+",descriptor="+descriptor);
                 owner = replaceInvokeInfo.getNewClassType();
+                //(Ljava/lang/Runnable;Ljava/lang/String;)V
+                //(Ljava/lang/Runnable;)V
+                if (descriptor.equals("()V")) {
+                    descriptor = "(Ljava/lang/String;)V";
+                    mv.visitLdcInsn(className);
+                } else if (descriptor.equals("(Ljava/lang/Runnable;)V")) {
+                    descriptor = "(Ljava/lang/Runnable;Ljava/lang/String;)V";
+                    mv.visitLdcInsn(className);
+                }
             }
-
             super.visitMethodInsn(opcode, owner, name, descriptor, isInterface);
         }
     }
@@ -98,7 +106,7 @@ public class ReplaceNewClassVisitor extends BaseWeaveClassVisitor{
             return false;
         }
         //java/lang/Thread
-        if (invokeInfo.getTargetClassType().contains("java/lang/Thread")) {
+        if (!invokeInfo.getTargetClassType().contains("java/lang/Thread")) {
             return false;
         }
         System.out.println("shouldReplace=className=" + className + ",invokeInfo= " + invokeInfo.classNode.name);

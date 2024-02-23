@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val thread = Thread()
         val intent = Intent()
         ImplA().testMethod()
-
+        ThreadTest.ttt()
         Log.i("Activity","onResume")
     }
 

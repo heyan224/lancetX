@@ -306,6 +306,7 @@ public class WeaverMethodParser {
             ReplaceInvokeInfo replaceInvokeInfo = new ReplaceInvokeInfo(
                     className,
                     newClassType,
+                    classNode,
                     methodNode,
                     newExtraClassType);
             transformInfo.addReplaceInvokes(replaceInvokeInfo);

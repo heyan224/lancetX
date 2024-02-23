@@ -8,7 +8,7 @@ java {
 }
 dependencies {
     //api 'io.github.knight-zxw:lancet-runtime:0.0.7'
-    implementation 'io.github.heyan224:lancet-runtime:0.0.1'
+    implementation 'io.github.heyan224:lancet-runtime:0.0.2'
     compileOnly "com.android.tools.build:gradle:4.1.2"
     compileOnly gradleApi()
 

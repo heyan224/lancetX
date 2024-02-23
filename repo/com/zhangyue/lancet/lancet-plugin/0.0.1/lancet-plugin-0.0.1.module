@@ -38,11 +38,11 @@
         {
           "name": "lancet-plugin-0.0.1.jar",
           "url": "lancet-plugin-0.0.1.jar",
-          "size": 143715,
-          "sha512": "710d73088f7990661bfd984743b46f7554d59b3ca96db769ea86d823fecef04a1b6e69b20c55f2fac9fa60802b3b8f24d839ab464dd9f449f964d3ca36f454e1",
-          "sha256": "b072a5165fccccf65c1adfdb9de0c0d54bced8ef04fdb71eff0a57f6a9683469",
-          "sha1": "88560bc3180ea00fb70298b8b16081cfc3eb5788",
-          "md5": "0856bf2dab91ab43470a993e4f9ad502"
+          "size": 149748,
+          "sha512": "2bd8d3ef93fa375d3c355c9736379253bc9ad72ed85ee3fe96c7a90274aafddb30260a503203041121345e707d11bb35552c482e9bbb173da6027e60c7fd5bcc",
+          "sha256": "8798cb8976b4035862b93d53904c94cbe086e8a7faae4e7773e256ec7f2a2bdd",
+          "sha1": "2ae5b9b21f4002e5d4308684a8d31fd99729f0e3",
+          "md5": "b723fd46a32cd86aea651de5d371199e"
         }
       ]
     },
@@ -103,11 +103,11 @@
         {
           "name": "lancet-plugin-0.0.1.jar",
           "url": "lancet-plugin-0.0.1.jar",
-          "size": 143715,
-          "sha512": "710d73088f7990661bfd984743b46f7554d59b3ca96db769ea86d823fecef04a1b6e69b20c55f2fac9fa60802b3b8f24d839ab464dd9f449f964d3ca36f454e1",
-          "sha256": "b072a5165fccccf65c1adfdb9de0c0d54bced8ef04fdb71eff0a57f6a9683469",
-          "sha1": "88560bc3180ea00fb70298b8b16081cfc3eb5788",
-          "md5": "0856bf2dab91ab43470a993e4f9ad502"
+          "size": 149748,
+          "sha512": "2bd8d3ef93fa375d3c355c9736379253bc9ad72ed85ee3fe96c7a90274aafddb30260a503203041121345e707d11bb35552c482e9bbb173da6027e60c7fd5bcc",
+          "sha256": "8798cb8976b4035862b93d53904c94cbe086e8a7faae4e7773e256ec7f2a2bdd",
+          "sha1": "2ae5b9b21f4002e5d4308684a8d31fd99729f0e3",
+          "md5": "b723fd46a32cd86aea651de5d371199e"
         }
       ]
     }
