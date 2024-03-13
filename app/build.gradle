@@ -16,28 +16,19 @@ ByteX {
     enableInDebug true
 }
 
-
 apply plugin: 'LancetX'
 LancetX{
     enable true
     enableInDebug true
-//    isFullTrace true
-//    myTrace "com/knightboost/lancetx/MyTrace"
-//    pluginInfo "app"
-    weaveGroup{
-        insertTest {
-            enable true
-        }
-        proxyTest {
-            enable true
-        }
-        replaceInvokeTest {
-            enable true
-        }
+
+    weaveGroup {
+
         threadOptimize {
-            enable true
+            enable false
             whiteNames = [
-                    "com/zhangyue/lancetx/ThreadTest"
+                    "com/jifen/open/lib",
+                    "com/inno/innosdk",
+                    "com/maplehaze"
             ]
             blackNames = [
 
@@ -45,6 +36,7 @@ LancetX{
         }
 
     }
+}
 
 //    methodGroup {
 //        "com/knightboost/lancetx" {
@@ -60,8 +52,6 @@ LancetX{
 //        }
 //
 //    }
-
-}
 
 android {
     compileSdk 32

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.zhangyue.lancetx.MainActivity">
+    tools:context="com.heyan.lancetx.MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/init_method_insert_test"

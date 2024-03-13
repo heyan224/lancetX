@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LancetX">
         <activity
-            android:name="com.zhangyue.lancetx.MainActivity"
+            android:name="com.heyan.lancetx.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
