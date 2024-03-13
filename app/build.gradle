@@ -26,9 +26,9 @@ LancetX{
         threadOptimize {
             enable false
             whiteNames = [
-                    "com/jifen/open/lib",
-                    "com/inno/innosdk",
-                    "com/maplehaze"
+                    "com/bb",
+                    "com/aa",
+                    "com/xx"
             ]
             blackNames = [
 
