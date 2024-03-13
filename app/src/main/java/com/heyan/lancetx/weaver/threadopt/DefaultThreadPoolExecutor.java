@@ -22,13 +22,13 @@ public class DefaultThreadPoolExecutor {
     private static ScheduledExecutorService cacheWorkPool =
             Executors.newSingleThreadScheduledExecutor(new DefaultNamedThreadFactory("cacheWorkPool"));
 
-    private static ThreadPoolExecutor ZyCoreThreadPool = new HCoreThreadPool(
+    private static ThreadPoolExecutor hCoreThreadPool = new HCoreThreadPool(
             5,
             20,
             30L,
             TimeUnit.SECONDS,
             new ArrayBlockingQueue(20),
-            new DefaultNamedThreadFactory("ZyCoreThreadPool"),
+            new DefaultNamedThreadFactory("HCoreThreadPool"),
             new PRejectedExecutionHandler());
 
     public static void execute(Runnable runnable, int priority) {
@@ -44,8 +44,8 @@ public class DefaultThreadPoolExecutor {
     }
 
 
-    public static ThreadPoolExecutor getZyCoreThreadPool(){
-        return  ZyCoreThreadPool;
+    public static ThreadPoolExecutor getHCoreThreadPool(){
+        return  hCoreThreadPool;
     }
 
 

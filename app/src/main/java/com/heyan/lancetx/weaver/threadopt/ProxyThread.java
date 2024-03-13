@@ -58,7 +58,7 @@ public class ProxyThread extends Thread {
                 super.start();
                 return;
             }
-            DefaultThreadPoolExecutor.getZyCoreThreadPool().execute(new Runnable() {
+            DefaultThreadPoolExecutor.getHCoreThreadPool().execute(new Runnable() {
                 @Override
                 public void run() {
                     try {

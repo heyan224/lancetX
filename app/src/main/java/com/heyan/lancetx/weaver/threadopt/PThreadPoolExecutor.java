@@ -57,7 +57,7 @@ public class PThreadPoolExecutor  extends ThreadPoolExecutor {
             return;
         }
         try {
-            DefaultThreadPoolExecutor.getZyCoreThreadPool().execute(command);
+            DefaultThreadPoolExecutor.getHCoreThreadPool().execute(command);
         } catch (OutOfMemoryError error) {
             DefaultThreadPoolExecutor.getExtraThreadPool().execute(command);
         }
@@ -71,7 +71,7 @@ public class PThreadPoolExecutor  extends ThreadPoolExecutor {
         }
 
         try {
-            return DefaultThreadPoolExecutor.getZyCoreThreadPool().submit(task);
+            return DefaultThreadPoolExecutor.getHCoreThreadPool().submit(task);
         } catch (OutOfMemoryError error) {
             return DefaultThreadPoolExecutor.getExtraThreadPool().submit(task);
         }
@@ -84,7 +84,7 @@ public class PThreadPoolExecutor  extends ThreadPoolExecutor {
             return super.submit(task);
         }
         try {
-            return DefaultThreadPoolExecutor.getZyCoreThreadPool().submit(task);
+            return DefaultThreadPoolExecutor.getHCoreThreadPool().submit(task);
         } catch (OutOfMemoryError error) {
             return DefaultThreadPoolExecutor.getExtraThreadPool().submit(task);
         }
