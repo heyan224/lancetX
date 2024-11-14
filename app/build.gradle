@@ -36,6 +36,8 @@ LancetX{
         }
 
     }
+
+    myTrace "com/heyan/lancetx/MyTrace"
 }
 
 //    methodGroup {

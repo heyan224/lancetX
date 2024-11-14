@@ -37,7 +37,11 @@ public class LancetExtension extends BaseExtension {
 
     private List<String> systemMethod = new ArrayList<>();
 
+    private Project project;
+
     public LancetExtension(Project project) {
+        this.project = project;
+        System.out.println("heyan=======project=====" + project.getStatus());
         //默认不可用
         enable(false);
         enableInDebug(false);
@@ -92,6 +96,7 @@ public class LancetExtension extends BaseExtension {
     }
 
     public String getMyTrace() {
+
         return myTrace;
     }
 
